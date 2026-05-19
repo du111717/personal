@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>自我介绍 + 学习笔记</title>
+    <meta
+      name="description"
+      content="一个可直接运行、响应式、有动效的个人网站模板，适合展示自我介绍与学习笔记。"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <!-- 顶部导航：修改菜单文字或锚点，可以对应到下方 section 的 id -->
+    <header class="site-header" data-glass>
+      <a class="brand" href="#home" aria-label="回到首页">
+        <span class="brand-mark">N</span>
+        <span>Notesfolio</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-label="打开菜单" aria-expanded="false">
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="site-nav" aria-label="主导航">
+        <a href="#about">关于我</a>
+        <a href="#skills">学习方向</a>
+        <a href="#notes">学习笔记</a>
+        <a href="#timeline">成长记录</a>
+        <a href="#contact">联系</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- 首屏介绍区：这里是页面最重要的个人定位，可替换姓名、身份和简介 -->
+      <section class="hero section" id="home">
+        <div class="hero-bg" aria-hidden="true"></div>
+        <div class="hero-glow glow-one" aria-hidden="true"></div>
+        <div class="hero-glow glow-two" aria-hidden="true"></div>
+        <div class="hero-glow glow-three" aria-hidden="true"></div>
+        <div class="hero-texture" aria-hidden="true"></div>
+        <div class="hero-overlay" aria-hidden="true"></div>
+        <div class="hero-content">
+          <p class="eyebrow hero-eyebrow">Personal Website / Study Journal</p>
+          <h1 class="hero-title" aria-label="学生 / AI爱好者 / 独立创作者">
+            <span>学生 / AI爱好者 /</span>
+            <span>独立创作者</span>
+          </h1>
+          <p class="hero-text">
+            正在学习技术、设计和产品思维，<br />
+            希望做出真正有趣的东西。
+          </p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#notes">浏览笔记</a>
+            <a class="btn ghost" href="#contact">联系我</a>
+          </div>
+        </div>
+
+        <!-- 首屏数据卡片：可以替换为你的项目数、笔记数、学习时长等 -->
+        <aside class="hero-panel" aria-label="学习概览">
+          <div>
+            <span class="metric" data-count="10">10</span>
+            <span class="metric-label">篇整理笔记</span>
+          </div>
+          <div>
+            <span class="metric" data-count="1">1</span>
+            <span class="metric-label">个项目</span>
+          </div>
+          <div>
+            <span class="metric" data-count="40" data-suffix="h">40h</span>
+            <span class="metric-label">累计学习</span>
+          </div>
+        </aside>
+      </section>
+
+      <!-- 自我介绍区：替换头像缩写、个人故事、特质标签即可变成你自己的内容 -->
+      <section class="section about" id="about">
+        <div class="section-heading reveal">
+          <p class="eyebrow">About Me</p>
+          <h2>自我介绍</h2>
+          <p>我喜欢把复杂的知识拆成清晰的小模块，再通过作品把它们连接起来。</p>
+        </div>
+
+        <div class="about-grid">
+          <article class="profile-card reveal">
+            <div class="avatar" aria-hidden="true">D</div>
+            <h3>杜</h3>
+            <p>前端学习者 / 笔记整理者 / 体验细节控</p>
+            <div class="tag-list" aria-label="个人标签">
+              <span>持续学习</span>
+              <span>注重表达</span>
+              <span>喜欢复盘</span>
+            </div>
+          </article>
+
+          <div class="story reveal">
+            <p>
+              我目前正在系统学习 Python、AI 应用开发与 RAG 知识库搭建。相比只追求“看过”，
+              我更在意自己能否把技术真正用起来，做出能解决实际问题的小工具和作品。
+            </p>
+            <p>
+              这个网站既是我的个人名片，也是一个轻量学习档案。我会在这里记录 Python 实践、
+              AI 工具探索、RAG 开发笔记，以及每个项目背后的思考和复盘。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 学习方向区：每一张卡片代表一个主题，data-progress 控制进度条数值 -->
+      <section class="section skills" id="skills">
+        <div class="section-heading skills-heading reveal">
+          <p class="eyebrow skills-eyebrow">Learning Map</p>
+          <h2>学习方向</h2>
+          <p>用目标感管理学习，不把时间花在模糊的努力上。</p>
+        </div>
+
+        <div class="skill-grid">
+          <article class="skill-card reveal" data-progress="82">
+            <span class="skill-icon">01</span>
+            <h3>前端基础</h3>
+            <p>语义化结构、布局、响应式、交互动效与浏览器基础。</p>
+            <div class="progress"><span></span></div>
+          </article>
+          <article class="skill-card reveal" data-progress="68">
+            <span class="skill-icon">02</span>
+            <h3>Python 基础</h3>
+            <p>学习了 Python 基础语法、函数、数据结构，以及简单脚本的编写。</p>
+            <div class="progress"><span></span></div>
+          </article>
+          <article class="skill-card reveal" data-progress="54">
+            <span class="skill-icon">03</span>
+            <h3>RAG 与 AI</h3>
+            <p>学习了 RAG 基础流程，并逐步向 AI 应用开发和智能工具方向靠齐。</p>
+            <div class="progress"><span></span></div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 学习笔记区：通过按钮筛选卡片，给每张笔记设置 data-category 即可归类 -->
+      <section class="section notes" id="notes">
+        <div class="section-heading notes-heading reveal">
+          <p class="eyebrow notes-eyebrow">Study Notes</p>
+          <h2>学习笔记</h2>
+          <p>把零散知识整理成可以回看、可以迁移、可以实践的记录。</p>
+        </div>
+
+        <div class="note-filters reveal" aria-label="笔记分类筛选">
+          <button class="filter-btn active" type="button" data-filter="all">全部</button>
+          <button class="filter-btn" type="button" data-filter="ai">AI</button>
+          <button class="filter-btn" type="button" data-filter="tech">技术</button>
+          <button class="filter-btn" type="button" data-filter="tool">工具</button>
+        </div>
+
+        <div class="notes-grid">
+          <article class="note-card reveal" data-category="tech">
+            <span class="note-date">Note 01</span>
+            <h3>AI 为什么总把格式搞乱？</h3>
+            <p>我开始理解，AI 不只是生成文字，也在生成结构。Markdown 与 JSON 本质上都是内容和数据的组织方式。</p>
+            <div class="note-detail" hidden>
+              <p>Markdown 更偏向给人阅读，适合标题、列表、引用和段落；JSON 更偏向给程序读取，要求字段、层级和符号都稳定。</p>
+              <p>当 AI 输出格式混乱时，往往不是它“不懂内容”，而是没有被清楚约束结构。以后写 Prompt 时，我会明确要求输出格式、字段名称和示例。</p>
+            </div>
+            <button class="note-toggle" type="button" aria-expanded="false">阅读全文</button>
+          </article>
+          <article class="note-card reveal" data-category="ai">
+            <span class="note-date">Note 02</span>
+            <h3>AI 生图并不在本地运行</h3>
+            <p>真正工作的其实是云端模型。本地输入 Prompt 后，通过 HTTP 请求调用 AI 能力，再返回图片或视频结果。</p>
+            <div class="note-detail" hidden>
+              <p>我逐渐明白，网页或工具里的“生成图片”按钮，本质上是在把文字请求发送到远程服务。模型在云端处理任务，再把生成结果传回来。</p>
+              <p>这让我开始理解 HTTP 请求、接口、参数和返回结果之间的关系，也知道了为什么网络、额度和等待时间会影响 AI 生图体验。</p>
+            </div>
+            <button class="note-toggle" type="button" aria-expanded="false">阅读全文</button>
+          </article>
+          <article class="note-card reveal" data-category="tool">
+            <span class="note-date">Note 03</span>
+            <h3>GitHub 不只是代码网站</h3>
+            <p>以前以为 GitHub 只是程序员仓库，后来发现它更像全球开发者共享知识、沉淀项目与协作的平台。</p>
+            <div class="note-detail" hidden>
+              <p>GitHub 里的仓库不仅能保存代码，还能记录版本、管理问题、展示文档，并让不同的人围绕同一个项目协作。</p>
+              <p>对我来说，它也像一个公开学习档案。每一次提交、每一个 README，都是把学习过程变得更清晰的一部分。</p>
+            </div>
+            <button class="note-toggle" type="button" aria-expanded="false">阅读全文</button>
+          </article>
+          <article class="note-card reveal" data-category="tech">
+            <span class="note-date">Note 04</span>
+            <h3>第三方登录背后的逻辑</h3>
+            <p>开始理解 OAuth 授权机制。很多网站并不直接保存密码，而是通过 Google 等平台完成身份验证。</p>
+            <div class="note-detail" hidden>
+              <p>第三方登录的关键不是“把密码交给网站”，而是让可信平台确认身份，再把授权结果交给当前应用。</p>
+              <p>OAuth 让我看到，登录不仅是表单提交，还涉及身份、权限、回调地址和安全边界。理解它之后，很多网站登录流程都变得更有逻辑。</p>
+            </div>
+            <button class="note-toggle" type="button" aria-expanded="false">阅读全文</button>
+          </article>
+          <article class="note-card reveal" data-category="tech">
+            <span class="note-date">Note 05</span>
+            <h3>我开始真正接触编程逻辑</h3>
+            <p>Python 不只是语法，更重要的是训练拆解问题、组织步骤和表达逻辑的能力。</p>
+            <div class="note-detail" hidden>
+              <p>学习 Python 时，我最有收获的不是记住某个语法，而是学会把一个问题拆成输入、处理和输出。</p>
+              <p>变量、条件、循环和函数看起来基础，但它们组合起来就是解决问题的骨架。写代码的过程，也是在训练自己更有条理地思考。</p>
+            </div>
+            <button class="note-toggle" type="button" aria-expanded="false">阅读全文</button>
+          </article>
+          <article class="note-card reveal" data-category="ai">
+            <span class="note-date">Note 06</span>
+            <h3>AI 为什么会“查资料”？</h3>
+            <p>开始学习 RAG 后发现，很多 AI 并不是直接记住所有知识，而是通过向量检索实时获取上下文。</p>
+            <div class="note-detail" hidden>
+              <p>RAG 的思路是先把资料切分、向量化，再根据问题检索相关内容，最后把这些内容交给模型生成回答。</p>
+              <p>这让我理解了“知识库问答”的基本逻辑：AI 的回答质量不只取决于模型，也取决于资料整理、检索效果和上下文组织。</p>
+            </div>
+            <button class="note-toggle" type="button" aria-expanded="false">阅读全文</button>
+          </article>
+          <article class="note-card reveal" data-category="ai">
+            <span class="note-date">Note 07</span>
+            <h3>Prompt 本质上是一种沟通设计</h3>
+            <p>好的 Prompt 不只是提问，而是在定义角色、结构、目标与输出格式，让 AI 更稳定地完成任务。</p>
+            <div class="note-detail" hidden>
+              <p>我开始意识到，Prompt 不是随便问一句，而是在设计一次沟通。要告诉 AI 它扮演什么角色、要解决什么问题、按什么结构输出。</p>
+              <p>当目标、边界和格式越清楚，结果就越稳定。Prompt Engineering 本质上也是一种把想法表达清楚的能力。</p>
+            </div>
+            <button class="note-toggle" type="button" aria-expanded="false">阅读全文</button>
+          </article>
+        </div>
+      </section>
+
+      <!-- 时间线区：适合记录学习节点、项目里程碑或证书经历 -->
+      <section class="section timeline" id="timeline">
+        <div class="section-heading timeline-heading reveal">
+          <p class="eyebrow timeline-eyebrow">Timeline</p>
+          <h2>成长记录</h2>
+          <p>把学习路线拆成清晰阶段，让每一次推进都能被看见。</p>
+        </div>
+
+        <div class="timeline-list timeline-track">
+          <article class="timeline-item reveal">
+            <span>阶段 01</span>
+            <h3>Python 基础打底</h3>
+            <p>从语法、函数和数据结构开始，逐步建立能独立写小脚本的技术基础。</p>
+          </article>
+          <article class="timeline-item reveal">
+            <span>阶段 02</span>
+            <h3>AI 应用方向探索</h3>
+            <p>尝试把 AI 工具融入学习和创作流程，理解提示词、模型能力和应用边界。</p>
+          </article>
+          <article class="timeline-item reveal">
+            <span>阶段 03</span>
+            <h3>RAG 项目推进</h3>
+            <p>学习知识库构建、检索增强生成和项目复盘，把零散知识整理成可用系统。</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- 联系区：替换邮箱、社交链接或行动按钮即可 -->
+      <section class="section contact" id="contact">
+        <div class="contact-inner reveal">
+          <div>
+            <p class="eyebrow">Contact</p>
+            <h2>一起交流学习与创作</h2>
+            <p>如果你对我的笔记、项目或学习方法感兴趣，欢迎联系我。</p>
+          </div>
+          <div class="contact-actions">
+            <a class="btn primary" href="mailto:3021008538@qq.com">3021008538@qq.com</a>
+            <a class="btn ghost dark" href="#home">回到顶部</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- 页脚：可以替换年份、姓名或备案信息 -->
+    <footer class="site-footer">
+      <p>© 2026 Lin Che. Built for learning, writing, and growing.</p>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
